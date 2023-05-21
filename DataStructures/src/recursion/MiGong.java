@@ -14,7 +14,7 @@ public class MiGong {
         MiGong miGong = new MiGong();
         miGong.generate(row, col);
         System.out.println("======= 迷宫结果（深拷贝） ========");
-        miGong.setTarget(5, 6);
+        miGong.setTarget(6, 5);
         int[][] pathMap = miGong.findWay(1, 1);
         miGong.printMap(pathMap);
 
@@ -121,20 +121,20 @@ public class MiGong {
      * @return
      */
     public boolean setWay(int[][] map, int i, int j) {
-        if (map[6][5] == 2) {
+        if (map[targetX][targetY] == 2) {
             return true;
         }
         if (map[i][j] == 0) {
             // 0=初始(没走过)，1=墙，2=可达，3=死路
             map[i][j] = 2;
             // 行走策略：下右上左
-            if (setWay(map, i + 1, j)) {
+            if (setWay(map, i + 1, j)) {        // 下
                 return true;
-            } else if (setWay(map, i, j + 1)) {
+            } else if (setWay(map, i, j + 1)) { // 右
                 return true;
-            } else if (setWay(map, i - 1, j)) {
+            } else if (setWay(map, i - 1, j)) { // 上
                 return true;
-            } else if (setWay(map, i, j - 1)) {
+            } else if (setWay(map, i, j - 1)) { // 左
                 return true;
             } else {
                 // 走不通，死路情况
