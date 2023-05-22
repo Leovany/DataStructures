@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 /**
- * 1. 两数相加
+ * 1. 两数之和
  */
 public class LeetCode_001_Two_Sum {
 
