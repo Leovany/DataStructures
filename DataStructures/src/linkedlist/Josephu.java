@@ -87,7 +87,7 @@ class CircleSingleLinkedList {
             System.out.println("参数错误");
             return;
         }
-
+        // 从第几个开始 （ startNo ）
         Node2 curNode = firstNode;
         for (int i = 0; i < (startNo - 1); i++) {
             curNode = curNode.next;

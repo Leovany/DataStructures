@@ -68,7 +68,7 @@ public class PolandCalculator {
      */
     public int calculator(String expression) {
         // 1. 中缀表达式
-        expression = "1+(2+3)*4-5";
+        //expression = "1+(2+3)*4-5";
         List<String> infixExpressionList = getInfixExpression(expression);    // [1,+,(,2,+,3,),*,4,-,5]
         System.out.println("中缀表达式 = " + infixExpressionList);
 
